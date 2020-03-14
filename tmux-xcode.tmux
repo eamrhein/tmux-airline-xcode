@@ -83,10 +83,8 @@ date_format=$(get "@xcode_date_format" " %d/%m/%Y")
 
 set "status-position" "top"
 set "status-right" ""
-# set "status-right" "#[fg=$xcode_white,bg=$xcode_black,nounderscore,noitalics]${time_format}  ${date_format} #[fg=$xcode_white,bg=$xcode_xcode]#[fg=$xcode_black,bg=$xcode_red]#[fg=$xcode_white, bg=$xcode_visual_grey]${status_widgets} #[fg=$xcode_green,bg=$xcode_visual_grey,nobold,nounderscore,noitalics]#[fg=$xcode_black,bg=$xcode_green,bold] #h #[fg=$xcode_yellow,
-# bg=$xcode_green]#[fg=$xcode_visual_grey,bg=$xcode_yellow]"
 set "status-left" "#[fg=$xcode_black,bg=$xcode_cyan,bold] #S #{prefix_highlight}#[fg=$xcode_cyan,bg=$xcode_black,nobold,nounderscore,noitalics]"
 
-set "window-status-format" "#[fg=$xcode_black,bg=$xcode_black,nobold,nounderscore,noitalics]#[fg=$xcode_white,bg=$xcode_magenta] #I  #W #[fg=$xcode_magenta,bg=$xcode_purple,nobold,nounderscore,noitalics]"
+set "window-status-format" "#[fg=$xcode_black,bg=$xcode_black,nobold,nounderscore,noitalics]#[fg=$xcode_white,bg=$xcode_black] #I  #W #[fg=$xcode_magenta,bg=$xcode_purple,nobold,nounderscore,noitalics]"
 
-set "window-status-current-format" "#[fg=$xcode_black,bg=$xcode_purple] #[fg=$xcode_white,bg=$xcode_purple,nobold] #I  #W #[fg=$xcode_purple,bg=$xcode_magenta,nobold,nounderscore,noitalics]"
+set "window-status-current-format" "#[fg=$xcode_purple,bg=$xcode_black,nobold] #I  #W #[fg=$xcode_purple,bg=$xcode_magenta,nobold,nounderscore,noitalics]"
