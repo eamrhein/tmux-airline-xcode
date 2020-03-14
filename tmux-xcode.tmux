@@ -1,12 +1,12 @@
 #!/bin/bash
-onedark_black="#242529"
-onedark_blue="#4eb0cc"
-onedark_yellow="#d9c97c"
-onedark_red="#ff8170"
-onedark_white="#dfdfe0"
-onedark_green="#78c2b3"
-onedark_visual_grey="#7f8c92"
-onedark_comment_grey="#dfdfe0"
+xcode_black="default"
+xcode_magenta="#ff7ab2"
+xcode_cyan="#dabaff"
+xcode_red="#ff8170"
+xcode_white="#dfdfe0"
+xcode_purple="#b281eb"
+xcode_visual_grey="#7f8c92"
+xcode_comment_grey="#dfdfe0"
 
 get() {
    local option=$1
@@ -39,51 +39,54 @@ set "status-left-length" "100"
 set "status-right-length" "100"
 set "status-right-attr" "none"
 
-set "message-fg" "$onedark_white"
-set "message-bg" "$onedark_black"
+set "message-fg" "$xcode_white"
+set "message-bg" "$xcode_black"
 
-set "message-command-fg" "$onedark_white"
-set "message-command-bg" "$onedark_black"
+set "message-command-fg" "$xcode_white"
+set "message-command-bg" "$xcode_black"
 
 set "status-attr" "none"
 set "status-left-attr" "none"
 
-setw "window-status-fg" "$onedark_black"
-setw "window-status-bg" "$onedark_black"
+setw "window-status-fg" "$xcode_white"
+setw "window-status-bg" "$xcode_black"
 setw "window-status-attr" "none"
 
-setw "window-status-activity-bg" "$onedark_black"
-setw "window-status-activity-fg" "$onedark_black"
+setw "window-status-activity-bg" "$xcode_black"
+setw "window-status-activity-fg" "$xcode_white"
 setw "window-status-activity-attr" "none"
 
 setw "window-status-separator" ""
 
-set "window-style" "fg=$onedark_comment_grey"
-set "window-active-style" "fg=$onedark_white"
+set "window-style" "fg=$xcode_comment_grey"
+set "window-active-style" "fg=$xcode_white"
 
-set "pane-border-fg" "$onedark_white"
-set "pane-border-bg" "$onedark_black"
-set "pane-active-border-fg" "$onedark_green"
-set "pane-active-border-bg" "$onedark_black"
+set "pane-border-fg" "$xcode_white"
+set "pane-border-bg" "$xcode_magenta"
+set "pane-active-border-fg" "$xcode_white"
+set "pane-active-border-bg" "$xcode_purple"
 
-set "display-panes-active-colour" "$onedark_yellow"
-set "display-panes-colour" "$onedark_blue"
+set "display-panes-active-colour" "$xcode_magenta"
+set "display-panes-colour" "$xcode_cyan"
 
-set "status-bg" "$onedark_black"
-set "status-fg" "$onedark_white"
+set "status-bg" "$xcode_black"
+set "status-fg" "$xcode_white"
 
-set "@prefix_highlight_fg" "$onedark_black"
-set "@prefix_highlight_bg" "$onedark_green"
-set "@prefix_highlight_copy_mode_attr" "fg=$onedark_black,bg=$onedark_green"
+set "@prefix_highlight_fg" "$xcode_black"
+set "@prefix_highlight_bg" "$xcode_magenta"
+set "@prefix_highlight_copy_mode_attr" "fg=$xcode_black,bg=$xcode_purple"
 set "@prefix_highlight_output_prefix" "  "
 
-status_widgets=$(get "@onedark_widgets")
-time_format=$(get "@onedark_time_format" "%R")
-date_format=$(get "@onedark_date_format" "%d/%m/%Y")
+status_widgets=$(get "@xcode_widgets")
+time_format=$(get "@xcode_time_format" "%R")
+date_format=$(get "@xcode_date_format" " %d/%m/%Y")
 
-set "status-right" "#[fg=$onedark_white,bg=$onedark_black,nounderscore,noitalics]${time_format}  ${date_format} #[fg=$onedark_red,bg=$onedark_black]#[fg=$onedark_visual_grey,bg=$onedark_visual_grey]#[fg=$onedark_white, bg=$onedark_visual_grey]${status_widgets} #[fg=$onedark_green,bg=$onedark_visual_grey,nobold,nounderscore,noitalics]#[fg=$onedark_black,bg=$onedark_green,bold] #h #[fg=$onedark_yellow,
-bg=$onedark_green]#[fg=$onedark_visual_grey,bg=$onedark_yellow]"
-set "status-left" "#[fg=$onedark_black,bg=$onedark_green,bold] #S #{prefix_highlight}#[fg=$onedark_green,bg=$onedark_black,nobold,nounderscore,noitalics]"
+set "status-position" "top"
+set "status-right" ""
+# set "status-right" "#[fg=$xcode_white,bg=$xcode_black,nounderscore,noitalics]${time_format}  ${date_format} #[fg=$xcode_white,bg=$xcode_xcode]#[fg=$xcode_black,bg=$xcode_red]#[fg=$xcode_white, bg=$xcode_visual_grey]${status_widgets} #[fg=$xcode_green,bg=$xcode_visual_grey,nobold,nounderscore,noitalics]#[fg=$xcode_black,bg=$xcode_green,bold] #h #[fg=$xcode_yellow,
+# bg=$xcode_green]#[fg=$xcode_visual_grey,bg=$xcode_yellow]"
+set "status-left" "#[fg=$xcode_black,bg=$xcode_cyan,bold] #S #{prefix_highlight}#[fg=$xcode_cyan,bg=$xcode_black,nobold,nounderscore,noitalics]"
 
-set "window-status-format" "#[fg=$onedark_black,bg=$onedark_black,nobold,nounderscore,noitalics]#[fg=$onedark_white,bg=$onedark_black] #I  #W #[fg=$onedark_black,bg=$onedark_black,nobold,nounderscore,noitalics]"
-set "window-status-current-format" "#[fg=$onedark_black,bg=$onedark_red,nobold,nounderscore,noitalics]#[fg=$onedark_white,bg=$onedark_red,nobold] #I  #W #[fg=$onedark_red,bg=$onedark_black,nobold,nounderscore,noitalics]"
+set "window-status-format" "#[fg=$xcode_black,bg=$xcode_black,nobold,nounderscore,noitalics]#[fg=$xcode_white,bg=$xcode_magenta] #I  #W #[fg=$xcode_magenta,bg=$xcode_purple,nobold,nounderscore,noitalics]"
+
+set "window-status-current-format" "#[fg=$xcode_black,bg=$xcode_purple] #[fg=$xcode_white,bg=$xcode_purple,nobold] #I  #W #[fg=$xcode_purple,bg=$xcode_magenta,nobold,nounderscore,noitalics]"
